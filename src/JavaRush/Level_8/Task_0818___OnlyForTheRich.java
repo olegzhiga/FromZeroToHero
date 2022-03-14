@@ -42,6 +42,6 @@ public class Task_0818___OnlyForTheRich {
     }
 
     public static void main(String[] args) {
-
+        removeItemFromMap(createMap());
     }
 }

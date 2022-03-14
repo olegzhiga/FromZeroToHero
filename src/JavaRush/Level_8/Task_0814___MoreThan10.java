@@ -21,7 +21,8 @@ public class Task_0814___MoreThan10 {
         // напишите тут ваш код
         Set<Integer> integerSet = new HashSet<>();
         for (int i = 0; i < 20; i++) {
-            integerSet.add((int) Math.ceil(Math.random() * 100));
+            //integerSet.add((int) Math.ceil(Math.random() * 100));
+            integerSet.add(i+1);
         }
         return integerSet;
     }
@@ -38,6 +39,8 @@ public class Task_0814___MoreThan10 {
     }
 
     public static void main(String[] args) {
-
+        for (Integer i : createSet()) {
+            System.out.println(i);
+        }
     }
 }

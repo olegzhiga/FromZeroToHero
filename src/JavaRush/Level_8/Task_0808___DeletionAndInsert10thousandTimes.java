@@ -58,7 +58,7 @@ public class Task_0808___DeletionAndInsert10thousandTimes {
 
     public static void remove10000(List list) {
         //напишите тут ваш код
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < list.size();) {
             list.remove(i);
         }
     }

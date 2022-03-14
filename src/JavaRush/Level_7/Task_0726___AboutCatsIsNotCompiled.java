@@ -22,7 +22,8 @@ Cat's name: Murka, age: 8, weight: 7, tail: 20
 •	Если пользователь ввел пустую строку вместо имени, то программа должна вывести данные на экран и завершиться.
 */
 public class Task_0726___AboutCatsIsNotCompiled {
-    public final static ArrayList<Cat> CATS = new ArrayList<>();
+//    public final static ArrayList<Cat> CATS = new ArrayList<>();
+    public static ArrayList<Cat> CATS = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

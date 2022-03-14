@@ -62,19 +62,15 @@ public class Task_0727___ChangingFunctionality {
             strings.add(string);
         }
 
-        ArrayList<String> resultStringsList = new ArrayList<>(strings.size()*3);
-        for (int i = 0; i < strings.size(); i++) {
-            if (strings.get(i).length() % 2 == 0){
-                resultStringsList.add(strings.get(i));
-                resultStringsList.add(strings.get(i));
-            } else if (strings.get(i).length() % 2 != 0){
-                resultStringsList.add(strings.get(i));
-                resultStringsList.add(strings.get(i));
-                resultStringsList.add(strings.get(i));
+        for (String string : strings) {
+            if (string.length() % 2 == 0) {
+                System.out.print(string + " ");
+                System.out.println(string + " ");
+            } else if (string.length() % 2 != 0) {
+                System.out.print(string + " ");
+                System.out.print(string + " ");
+                System.out.println(string + " ");
             }
-        }
-        for (String s : resultStringsList) {
-            System.out.println(s);
         }
 
 //        ArrayList<String> resultStrings = new ArrayList<String>();

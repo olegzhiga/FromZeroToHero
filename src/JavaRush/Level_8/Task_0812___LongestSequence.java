@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 /*
 Cамая длинная последовательность
@@ -29,23 +30,48 @@ public class Task_0812___LongestSequence {
         //напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Integer> inputIntegerList = new ArrayList<>();
-        int longestSequence = 1;
-        int longestSequence2 = 1;
         for (int i = 0; i < 10; i++) {
             inputIntegerList.add(Integer.parseInt(reader.readLine()));
         }
 
+        // первый способ
+        // в этом блоке нахожу колличество вообще повторяющихся чисел:
+        List<Integer> integerList = new ArrayList<>();
+        int longestSequence = 1;
         for (int i = 0; i < inputIntegerList.size()-1; i++) {
-            if (inputIntegerList.get(i).equals(inputIntegerList.get(i + 1))){
+            if (inputIntegerList.get(i).equals(inputIntegerList.get(i + 1))) {
                 longestSequence++;
+                integerList.add(longestSequence);
             }else {
-                if(longestSequence2 < longestSequence){
-                    longestSequence2 = longestSequence;
-                    longestSequence = 0;
-                }
+                integerList.add(longestSequence);
+                longestSequence = 1;
             }
         }
+        // в этом блоке нахожу колличество самого повторяющегося числа:
+        int mostUsed = 0;
+        for (Integer i : integerList) {
+            if(mostUsed < i){
+                mostUsed = i;
+            }
+        }
+        System.out.println(mostUsed);
 
-        System.out.println(Math.max(longestSequence, longestSequence2));
+
+
+        // вариант по проще:
+        int count = 1;
+        int max = 1;
+        for (int i=0; i<inputIntegerList.size()-1;i++)
+        {
+            if (inputIntegerList.get(i).equals(inputIntegerList.get(i + 1)))
+            {
+                count++;
+                if (max < count)
+                    max = count;
+            }
+            else
+                count=1;
+        }
+        System.out.println(max);
     }
 }

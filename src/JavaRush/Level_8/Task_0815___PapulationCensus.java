@@ -37,7 +37,9 @@ public class Task_0815___PapulationCensus {
         //напишите тут ваш код
         int countSameValues = 0;
         for (Map.Entry <String,String> s : map.entrySet()) {
-            if(name.equals(s.getValue())); countSameValues++;
+            if(name.equals(s.getValue())){
+                countSameValues++;
+            }
         }
         return countSameValues;
     }
@@ -46,12 +48,18 @@ public class Task_0815___PapulationCensus {
         //напишите тут ваш код
         int countSameKeys = 0;
         for (Map.Entry <String,String> s : map.entrySet()) {
-            if(lastName.equals(s.getValue())); countSameKeys++;
+            if(lastName.equals(s.getKey())){
+                countSameKeys++;
+            }
         }
         return countSameKeys;
     }
 
     public static void main(String[] args) {
+        int conut = getCountTheSameFirstName(createMap(), "Андрей");
+        int count2 = getCountTheSameLastName(createMap(), "Беляков");
 
+        System.out.println("FirstName "+ conut);
+        System.out.println("LastName " + count2);
     }
 }

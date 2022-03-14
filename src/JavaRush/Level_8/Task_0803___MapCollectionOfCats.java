@@ -32,7 +32,7 @@ public class Task_0803___MapCollectionOfCats {
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         //напишите тут ваш код
         Map<String, Cat> stringCatMap = new HashMap<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < cats.length; i++) {
             stringCatMap.put(cats[i], new Cat(cats[i]));
         }
         return stringCatMap;

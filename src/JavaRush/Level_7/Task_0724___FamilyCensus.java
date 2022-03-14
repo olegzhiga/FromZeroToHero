@@ -49,17 +49,17 @@ public class Task_0724___FamilyCensus {
     public static class Human {
         // напишите тут ваш код
         String name;
-        Boolean sex;
+        boolean sex;
         int age;
         Human father;
         Human mother;
 
-        public Human(String name, Boolean sex, int age){
+        public Human(String name, boolean sex, int age){
             this.name = name;
             this.sex = sex;
             this.age = age;
         }
-        public Human(String name, Boolean sex, int age, Human father, Human mother){
+        public Human(String name, boolean sex, int age, Human father, Human mother){
             this.name = name;
             this.sex = sex;
             this.age = age;

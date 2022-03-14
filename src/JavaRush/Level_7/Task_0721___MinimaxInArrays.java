@@ -19,20 +19,21 @@ import java.io.InputStreamReader;
 */
 public class Task_0721___MinimaxInArrays {
     public static void main(String[] args) throws IOException {
-        int maximum = 0;
-        int minimum = Integer.MAX_VALUE;
+        int maximum;
+        int minimum;
         //напишите тут ваш код
+        maximum = Integer.MIN_VALUE;
+        minimum = Integer.MAX_VALUE;
 
-        int[] inputIntegers = new int[20];
-        getInts(inputIntegers);
+        int[] array = getInts();
 
-        for (int i :inputIntegers) {
+        for (int i : array) {
             if (maximum < i){
                 maximum = i;
             }
         }
 
-        for (int i :inputIntegers) {
+        for (int i : array) {
             if (minimum > i){
                 minimum = i;
             }
@@ -42,9 +43,10 @@ public class Task_0721___MinimaxInArrays {
     }
 
     //напишите тут ваш код
-    public static int[] getInts(int[] array) throws IOException {
+    public static int[] getInts() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 20; i++) {
+        int[] array = new int[20];
+        for (int i = 0; i < array.length; i++) {
 //            System.out.print("Enter " + (i+1) + "/20 integer of list: ");
             array[i] = Integer.parseInt(reader.readLine());
         }
