@@ -4,6 +4,22 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+public class Task_0942___Olympiad {
+
+    public static void main(String[] args) throws IOException {
+
+        // input variables:
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int[] arr = new int[Integer.parseInt(bufferedReader.readLine())];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(bufferedReader.readLine());
+        }
+        System.out.println(1);
+    }
+}
+
+
+
 /*
 Трое студентов, пятикурсник, третьекурсник и первокурсник,
 живут в одной комнате общежития и любят участвовать в соревнованиях по программированию по правилам ACM.
@@ -15,7 +31,8 @@ import java.io.InputStreamReader;
 Для решения одной и той же задачи наши студенты тратят одинаковое количество времени.
 
 Ваша задача – по описанию соревнований по программированию определить, кто из студентов победит.
-Напомним, что по правилам ACM побеждает участник, за 300 минут решивший больше всего задач, а при равенстве количества задач – набравший меньше штрафного времени.
+Напомним, что по правилам ACM побеждает участник, за 300 минут решивший больше всего задач,
+а при равенстве количества задач – набравший меньше штрафного времени.
 
 Наши студенты – очень сильные программисты, и при решении задач они не делают неправильных попыток.
 Поэтому за задачу начисляется штраф в размере количества минут от начала соревнования до её посылки на проверку.
@@ -30,7 +47,7 @@ import java.io.InputStreamReader;
 В выходной файл OUTPUT.TXT выведите номер курса студента, одержавшего победу в олимпиаде.
 
 Примеры
-INPUT.TXT	    OUTPUT.TXT
+INPUT.TXT	        OUTPUT.TXT
 3
 40 30 60	        1
 
@@ -38,42 +55,9 @@ INPUT.TXT	    OUTPUT.TXT
 10 20 30 40	        1
 
 Пояснение к примерам
-В первом тесте пятикурсник набрал 240 штрафных минут (40 + 70 + 130), третьекурсник – 280 (60 + 90 + 130), первокурсник - 230 минут (30 + 70 + 130).
+В первом тесте пятикурсник набрал 240 штрафных минут (40 + 70 + 130),
+третьекурсник – 280 (60 + 90 + 130), первокурсник - 230 минут (30 + 70 + 130).
 
-Во втором тесте третьекурсник набрал 300 минут, а первокурсник и пятикурсник – 200 минут. Но пятикурсник уступил первокурснику.
-
-
+Во втором тесте третьекурсник набрал 300 минут, а первокурсник и пятикурсник – 200 минут.
+Но пятикурсник уступил первокурснику.
  */
-public class Task_942___Olympiad {
-
-    public static void main(String[] args) throws IOException {
-
-        // input variables:
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int[] arr = new int[Integer.parseInt(bufferedReader.readLine())];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Integer.parseInt(bufferedReader.readLine());
-        }
-        System.out.println(1);
-    }
-}
-    /*
-    // print results:
-        System.out.println(student5(arr));
-        System.out.println();
-        System.out.println();
-        System.out.println();
-    }
-
-    public static int student5 (int[] arr){
-        int tempInt = arr[0];
-        int[] tempArr = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            int a = 0;
-            tempArr[i] = arr[i] + a;
-            a = arr[i-1];
-        }
-        return null;
-    }
-}
-*/

@@ -21,7 +21,7 @@ import java.io.InputStreamReader;
 INPUT.TXT	    OUTPUT.TXT
 3	            4
  */
-public class Task_903___Pearl {
+public class Task_0903___Pearl {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         int i = Integer.parseInt(bufferedReader.readLine());

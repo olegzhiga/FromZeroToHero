@@ -4,6 +4,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+public class Task_0025___MoreLess {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(bufferedReader.readLine());
+        int b = Integer.parseInt(bufferedReader.readLine());
+
+        if (a > b){
+            System.out.println(">");
+        }else if (a < b){
+            System.out.println("<");
+        }else{
+            System.out.println("=");
+        }
+    }
+}
+
+
+
 /*
 Одна из основных операций с числами – их сравнение.
 Мы подозреваем, что вы в совершенстве владеете этой операцией и можете сравнивать любые числа,
@@ -27,18 +45,3 @@ INPUT.TXT	    OUTPUT.TXT
 13
 13	            =
  */
-public class Task_25___MoreLess {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int a = Integer.parseInt(bufferedReader.readLine());
-        int b = Integer.parseInt(bufferedReader.readLine());
-
-        if (a > b){
-            System.out.println(">");
-        }else if (a < b){
-            System.out.println("<");
-        }else{
-            System.out.println("=");
-        }
-    }
-}
